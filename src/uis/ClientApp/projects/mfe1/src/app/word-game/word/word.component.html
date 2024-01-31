@@ -1,0 +1,17 @@
+<div class="word">
+  <div class="letter-box" [ngClass]="{'gray': showHint && !word.includes(guessedWord[0]), 'yellow': showHint && guessedWord[0] != word[0] && word.includes(guessedWord[0]), 'green': showHint && guessedWord[0] == word[0]}">
+    <div class="letter">{{guessedWord[0]}}</div>
+  </div>
+  <div class="letter-box" [ngClass]="{'gray': showHint && !word.includes(guessedWord[1]), 'yellow': showHint && guessedWord[1] != word[1] && word.includes(guessedWord[1]), 'green': showHint && guessedWord[1] == word[1]}">
+    <div class="letter">{{guessedWord[1]}}</div>
+  </div>
+  <div class="letter-box" [ngClass]="{'gray': showHint && !word.includes(guessedWord[2]), 'yellow': showHint && guessedWord[2] != word[2] && word.includes(guessedWord[2]), 'green': showHint && guessedWord[2] == word[2]}">
+    <div class="letter">{{guessedWord[2]}}</div>
+  </div>
+  <div class="letter-box" [ngClass]="{'gray': showHint && !word.includes(guessedWord[3]), 'yellow': showHint && guessedWord[3] != word[3] && word.includes(guessedWord[3]), 'green': showHint && guessedWord[3] == word[3]}">
+    <div class="letter">{{guessedWord[3]}}</div>
+  </div>
+  <div class="letter-box" [ngClass]="{'gray': showHint && !word.includes(guessedWord[4]), 'yellow': showHint && guessedWord[4] != word[4] && word.includes(guessedWord[4]), 'green': showHint && guessedWord[4] == word[4]}">
+    <div class="letter">{{guessedWord[4]}}</div>
+  </div>
+</div>

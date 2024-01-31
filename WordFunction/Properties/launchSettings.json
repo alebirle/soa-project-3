@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "WordFunction": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "commandLineArgs": "--port 7027"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 30959,
+      "useSSL": false
+    }
+  }
+}

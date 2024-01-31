@@ -1,0 +1,100 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/identity/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity",
+          "Port": 80
+        },
+        {
+          "Host": "identity",
+          "Port": 81
+        }
+      ],
+      "UpstreamPathTemplate": "/identity/login",
+      "LoadBalancer": "RoundRobin",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/identity/register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity",
+          "Port": 80
+        },
+        {
+          "Host": "identity",
+          "Port": 81
+        }
+      ],
+      "UpstreamPathTemplate": "/identity/register",
+      "LoadBalancer": "RoundRobin",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/identity/validate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity",
+          "Port": 80
+        },
+        {
+          "Host": "identity",
+          "Port": 81
+        }
+      ],
+      "UpstreamPathTemplate": "/identity/validate",
+      "LoadBalancer": "RoundRobin",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/word",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "game",
+          "Port": 80
+        },
+        {
+          "Host": "game",
+          "Port": 81
+        }
+      ],
+      "UpstreamPathTemplate": "/word",
+      "LoadBalancer": "RoundRobin",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/guess",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "game",
+          "Port": 80
+        },
+        {
+          "Host": "game",
+          "Port": 81
+        }
+      ],
+      "UpstreamPathTemplate": "/guess",
+      "LoadBalancer": "RoundRobin",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:44300/"
+  }
+}

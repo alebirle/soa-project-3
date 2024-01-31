@@ -1,0 +1,53 @@
+version: "3.8"
+services:
+  mongo:
+    image: mongo
+    ports:
+       - 27017:27017
+
+  game:
+    build:
+      context: .
+      dockerfile: src/microservices/GameMicroservice/Dockerfile
+    depends_on:
+      - mongo
+    ports:
+      - 44388:80
+
+  identity:
+    build:
+      context: .
+      dockerfile: src/microservices/IdentityMicroservice/Dockerfile
+    depends_on:
+      - mongo
+    ports:
+      - 44397:80
+
+  game-2:
+    build:
+      context: .
+      dockerfile: src/microservices/GameMicroservice/Dockerfile
+    depends_on:
+      - mongo
+    ports:
+      - 44389:81
+
+  identity-2:
+    build:
+      context: .
+      dockerfile: src/microservices/IdentityMicroservice/Dockerfile
+    depends_on:
+      - mongo
+    ports:
+      - 44398:81
+
+  frontendgw:
+    build:
+      context: .
+      dockerfile: src/gateways/FrontendGateway/Dockerfile
+    depends_on:
+      - mongo
+      - game
+      - identity
+    ports:
+      - 44300:80
