@@ -1,8 +1,9 @@
 .letter-box {
   width: 50px;
   height: 50px;
-  border: 1px solid black;
+  border: 1px solid gray;
   margin: 2px;
+  border-radius: 5%;
 }
 
 .letter {
@@ -22,13 +23,22 @@
 }
 
 .green {
-  background-color: green;
+  border: none;
+  width: 51.5px;
+  height: 51.5px;
+  background-color: rgb(94, 153, 94);
 }
 
 .yellow {
-  background-color: yellow;
+  border: none;
+  width: 51.5px;
+  height: 51.5px;
+  background-color: rgb(245, 245, 141);
 }
 
 .gray {
-  background-color: gray;
+  border: none;
+  width: 51.5px;
+  height: 51.5px;
+  background-color: rgb(182, 182, 182);
 }

@@ -2,6 +2,30 @@
   position: absolute;
   top: 2%;
   right: 2%;
-  width: 70px;
-  height: 40px;
+  width: 75px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(182, 182, 182);
+  color: white;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.game {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.guess {
+  width: 274px;
+  height: 50px;
+  background-color: rgb(94, 153, 94);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: large;
+  cursor: pointer;
 }

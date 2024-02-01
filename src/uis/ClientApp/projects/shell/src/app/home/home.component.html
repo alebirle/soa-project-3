@@ -1,11 +1,12 @@
-<h1>Welcome!</h1>
-<h2>Please login:</h2>
-<div>
-  <input [(ngModel)]="email" type="text" placeholder="Username">
+<div class="login-page">
+  <h1>Welcome!</h1>
+  <h2>Please login or register:</h2>
+  <div>
+    <input class="input" [(ngModel)]="email" type="text" placeholder="Email">
+  </div>
+  <div>
+    <input class="input" [(ngModel)]="password" type="password" placeholder="Password">
+  </div>
+  <button class="button login" (click)="login()">Login</button>
+  <button class="button register" (click)="register()">Register</button>
 </div>
-<div>
-  <input [(ngModel)]="password" type="password" placeholder="Password">
-</div>
-<button (click)="login()">Login</button>
-<p>Or</p>
-<button (click)="register()">Register</button>

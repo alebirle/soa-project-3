@@ -1,0 +1,35 @@
+.login-page {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input {
+  width: 225px;
+  height: 35px;
+  margin: 4px;
+  padding-left: 10px;
+  font-size: medium;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.button {
+  width: 239px;
+  height: 35px;
+  margin: 4px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: large;
+  cursor: pointer;
+}
+
+.login {
+  background-color: rgb(94, 153, 94);
+}
+
+.register {
+  background-color: rgb(182, 182, 182);
+}

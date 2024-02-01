@@ -1,9 +1,10 @@
-<h1>{{gameOver}}</h1>
-<p>Guess the word:</p>
-<app-word [guessedWord]="guesses[0]" [word]="word" [showHint]="guessNo > 0"></app-word>
-<app-word [guessedWord]="guesses[1]" [word]="word" [showHint]="guessNo > 1"></app-word>
-<app-word [guessedWord]="guesses[2]" [word]="word" [showHint]="guessNo > 2"></app-word>
-<app-word [guessedWord]="guesses[3]" [word]="word" [showHint]="guessNo > 3"></app-word>
-<app-word [guessedWord]="guesses[4]" [word]="word" [showHint]="guessNo > 4"></app-word>
-<button (click)="guess()">Guess</button>
-<button class="logout" (click)="logout()">Logout</button>
+<div class="game">
+  <h1>{{gameOver ? gameOver : 'Guess the word:'}}</h1>
+  <app-word [guessedWord]="guesses[0]" [word]="word" [showHint]="guessNo > 0"></app-word>
+  <app-word [guessedWord]="guesses[1]" [word]="word" [showHint]="guessNo > 1"></app-word>
+  <app-word [guessedWord]="guesses[2]" [word]="word" [showHint]="guessNo > 2"></app-word>
+  <app-word [guessedWord]="guesses[3]" [word]="word" [showHint]="guessNo > 3"></app-word>
+  <app-word [guessedWord]="guesses[4]" [word]="word" [showHint]="guessNo > 4"></app-word>
+  <button class="guess" (click)="guess()">Guess</button>
+  <button class="logout" (click)="logout()">Logout</button>
+</div>

@@ -66,12 +66,12 @@ export class GameComponent implements OnInit {
           .subscribe((res: any) => {
             if (this.guesses[this.guessNo] == this.word) {
               this.guessNo++;
-              this.gameOver = 'you guessed!';
+              this.gameOver = 'You guessed!';
             }
             else {
               this.guessNo++;
               if (this.guessNo > 4) {
-                this.gameOver = 'game over';
+                this.gameOver = `The word was: ${this.word}`;
               }
             }
         });
