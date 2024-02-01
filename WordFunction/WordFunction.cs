@@ -15,7 +15,7 @@ public class WordGenerator
     }
 
     [FunctionName("WordGenerator")]
-    public void Run([TimerTrigger("0 6 * * *"
+    public void Run([TimerTrigger("0 0 6 * * *"
             #if DEBUG
                 , RunOnStartup=true
             #endif
