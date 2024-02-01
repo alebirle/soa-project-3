@@ -11,18 +11,13 @@ public class IdentityController(IUserRepository userRepository, IJwtBuilder jwtB
     : ControllerBase
 {
     [HttpPost("login")]
-    public IActionResult Login([FromBody] User user, [FromQuery(Name = "d")] string destination = "frontend")
+    public IActionResult Login([FromBody] User user)
     {
         var u = userRepository.GetUser(user.Email);
 
         if (u == null)
         {
             return NotFound("User not found.");
-        }
-
-        if (destination == "backend" && !u.IsAdmin)
-        {
-            return BadRequest("Could not authenticate user.");
         }
 
         var isValid = u.ValidatePassword(user.Password, encryptor);

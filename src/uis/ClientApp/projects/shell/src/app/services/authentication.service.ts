@@ -11,7 +11,7 @@ export class AuthenticationService {
   constructor(private http: HttpClient) { }
 
   login(data) {
-    return this.http.post(this.authenticationPath + "/login?d=frontend", data, {
+    return this.http.post(this.authenticationPath + "/login", data, {
       headers: this.JSON_headers,
       responseType: 'text'
     });
